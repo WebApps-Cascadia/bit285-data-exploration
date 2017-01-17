@@ -13,7 +13,7 @@
        OleDbConnection objConnection = new OleDbConnection(strConnect);
     
     // SQL Command
-       string strCommand = "SELECT ProductName , UnitPrice  FROM products";
+       string strCommand = "SELECT ProductName , UnitPrice FROM products Order By ProductName ASC";
        OleDbDataAdapter objCommand = new OleDbDataAdapter(strCommand, objConnection);
     
        // Fill the empty DataSet Object with the contents of the command object
