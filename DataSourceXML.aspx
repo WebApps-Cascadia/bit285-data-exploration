@@ -20,9 +20,9 @@
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        DataTable Soup = new DataTable();
-        Soup.NewRow();
-        gvArtists.DataSource = Artists;
+        
+
+
         
     }
 </script>
