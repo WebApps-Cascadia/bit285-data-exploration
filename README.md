@@ -1,3 +1,5 @@
+//Student: Jonathan Lopez
+
 # BIT 285 - Data Exploration Exercise
 ## Part 1 -  DataSource.aspx
 Review the Source code for the page and the use of the ArrayList as a data source
