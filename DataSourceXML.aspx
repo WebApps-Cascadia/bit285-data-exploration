@@ -19,12 +19,6 @@
         gvArtists.DataBind();
     }
 
-    private void CreateNewRow()
-    {
-        DataTable nArtists = new DataTable();
-        
-        
-    }
     protected void Button1_Click(object sender, EventArgs e)
     {
         DataRow newRow = Artists.Tables[0].NewRow();
@@ -45,6 +39,10 @@
     <form id="form1" runat="server">
         <asp:GridView ID="gvArtists" runat="server"></asp:GridView>
         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtNationality" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtMovement" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtBirthdate" runat="server"></asp:TextBox>
     </form>
 </body>
 </html>
