@@ -23,12 +23,34 @@
     {
         DataRow newRow = Artists.Tables[0].NewRow();
 
-        newRow["name"] = "Nas";
-        newRow["nationality"] = "African American";
-        newRow["movement"] = "Hip-Hop";
-        newRow["birthdate"] = "Unknown";
+        ////This code manually writes coded data to a new row.
+        //newRow["name"] = "Nas";
+        //newRow["nationality"] = "African American";
+        //newRow["movement"] = "Hip-Hop";
+        //newRow["birthdate"] = "Unknown";
+        //Artists.Tables[0].Rows.Add(newRow);
+        //gvArtists.DataBind();
+
+        //This code adds a new row based on user input from into the text boxs.
+        string txt1 = txtName.Text;
+        string txt2 = txtNationality.Text;
+        string txt3 = txtMovement.Text;
+        string txt4 = txtBirthdate.Text;
+
+        newRow["name"] = txt1;
+        newRow["nationality"] = txt2;
+        newRow["movement"] = txt3;
+        newRow["birthdate"] = txt4;
         Artists.Tables[0].Rows.Add(newRow);
+        Artists.WriteXml(Server.MapPath("~/App_Data/artists.xml"));
         gvArtists.DataBind();
+
+        //The following if statement is a work in progress. Attempt to not write a blank row to table on button click.
+        //if (txt1 == null || txt2 == null || txt3 == null || txt4 == null)
+        //{
+
+        //}
+
     }
 </script>
 <html>
