@@ -20,7 +20,20 @@
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        DataTable table;
+        table = Artists.Tables[0];
 
+        DataRow row;
+        row = table.NewRow();
+
+        row["name"] = "Banksy";
+        row["nationality"] = "English";
+        row["movement"] = "Street Art";
+        row["birthdate"] = "unknown";
+        table.Rows.Add(row);
+
+        gvArtists.DataSource = table;
+        gvArtists.DataBind();
     }
 </script>
 <html>
