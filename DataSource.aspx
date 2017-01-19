@@ -16,7 +16,7 @@
 
             ddlSections.DataSource = Sections;
             ddlSections.DataBind();
-        }
+        } 
     </script>
 </head>
 <body>
@@ -27,6 +27,11 @@
         </asp:DropDownList>
     
     </div>
+        
+        <asp:DropDownList ID="ddlCategories" runat="server" DataSourceID="grocergo" DataTextField="CategoryName" DataValueField="CategoryID">
+            <asp:ListItem>ddlCategories</asp:ListItem>
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="grocergo" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Categories]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

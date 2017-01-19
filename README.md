@@ -1,4 +1,4 @@
-# BIT 285 - Data Exploration Exercise
+# BIT 285 - Data Exploration Exercise Himakar 
 ## Part 1 -  DataSource.aspx
 Review the Source code for the page and the use of the ArrayList as a data source
 Run the website and view the page.
