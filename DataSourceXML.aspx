@@ -16,11 +16,21 @@
 
         gvArtists.DataSource = Artists;
         gvArtists.DataBind();
+
+
+        string artistname = "Leonardo da Vinci";
+        string artistnationality = "Italian";
+        string movement = "Rennissace";
+        string birthdate = "2nd May 1519";
+
+        DataRow newArtist = new DataRow(artistname, artistnationality, movement, birthdate);
+        Artists.WriteXml(newArtist);
+
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        
+
     }
 </script>
 <html>
