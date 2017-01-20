@@ -11,7 +11,7 @@
             ArrayList Sections = new ArrayList();
             Sections.Add("Organic Produce");
             Sections.Add("Baking");
-            Sections.Add("Soups");
+            Sections.Add("Soups"); 
             Sections.Sort();
 
             ddlSections.DataSource = Sections;
@@ -21,10 +21,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div>  
         <asp:DropDownList ID="ddlSections" runat="server">
         </asp:DropDownList>
+    
+        <asp:AccessDataSource ID="ArrayList" runat="server" DataFile="~/App_Data/grocertogo.mdb" SelectCommand="SELECT * FROM [Categories]"></asp:AccessDataSource>
     
     </div>
     </form>
