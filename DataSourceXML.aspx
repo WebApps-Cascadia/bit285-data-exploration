@@ -12,9 +12,22 @@
     {
         String xmlFilename = Server.MapPath("~/App_Data/artists.xml");
         Artists = new DataSet();
-        Artists.ReadXml(xmlFilename);    
+        Artists.ReadXml(xmlFilename);
 
         gvArtists.DataSource = Artists;
+        gvArtists.DataBind();
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        DataTable myTable = Artists.Tables[0];
+        DataRow myRow = myTable.NewRow();
+        myRow["name"] = "Pete";
+        myRow["nationality"] = "Greek";
+        myRow["movement"] = "Awake";
+        myRow["birthdate"] = "7th May 1985";
+
+        myTable.Rows.Add(myRow);
+
         gvArtists.DataBind();
     }
 
@@ -26,6 +39,7 @@
 <body>
     <form  id="form1" runat="server">
         <asp:GridView id="gvArtists" runat="server"></asp:GridView>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
     </form>
 </body>
 </html>

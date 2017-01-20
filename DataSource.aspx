@@ -27,6 +27,9 @@
         </asp:DropDownList>
     
     </div>
+        <asp:DropDownList ID="ddlCategories" runat="server" DataSourceID="AccessDataSource1" DataTextField="CategoryName" DataValueField="CategoryID">
+        </asp:DropDownList>
+        <asp:AccessDataSource ID="AccessDataSource1" runat="server" DataFile="~/App_Data/grocertogo.mdb" SelectCommand="SELECT * FROM [Categories]"></asp:AccessDataSource>
     </form>
 </body>
 </html>
