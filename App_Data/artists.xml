@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" standalone="yes"?>
 <artist>
   <item>
     <name>Vincent Van Gogh</name>
@@ -17,5 +17,29 @@
     <nationality>German </nationality>
     <movement>Surrealism </movement>
     <birthdate>2nd April 1891</birthdate>
+  </item>
+  <item>
+    <name>Jean</name>
+    <nationality>American</nationality>
+    <movement>Now</movement>
+    <birthdate>20th November 1978</birthdate>
+  </item>
+  <item>
+    <name>Franklin</name>
+    <nationality>Feline</nationality>
+    <movement>Cat</movement>
+    <birthdate>23rd March 2012</birthdate>
+  </item>
+  <item>
+    <name>test1</name>
+    <nationality>test</nationality>
+    <movement>test</movement>
+    <birthdate>test</birthdate>
+  </item>
+  <item>
+    <name>test2</name>
+    <nationality>test</nationality>
+    <movement>test</movement>
+    <birthdate>test</birthdate>
   </item>
 </artist>
