@@ -6,9 +6,12 @@
 <head runat="server">
     <title>Categories</title>
     <script runat="server">
+
+        ArrayList Sections;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArrayList Sections = new ArrayList();
+            Sections = new ArrayList();
             Sections.Add("Organic Produce");
             Sections.Add("Baking");
             Sections.Add("Soups");
@@ -17,16 +20,12 @@
             ddlSections.DataSource = Sections;
             ddlSections.DataBind();
         }
-    </script>
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
         <asp:DropDownList ID="ddlSections" runat="server">
         </asp:DropDownList>
-    
-    </div>
     </form>
 </body>
 </html>
