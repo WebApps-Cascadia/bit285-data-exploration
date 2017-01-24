@@ -14,7 +14,7 @@
             Sections.Add("Soups");
             Sections.Sort();
 
-            ddlSections.DataSource = Sections;
+            //ddlSections.DataSource = Sections;
             ddlSections.DataBind();
         }
     </script>
@@ -23,8 +23,11 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:DropDownList ID="ddlSections" runat="server">
+        <asp:DropDownList ID="ddlSections" runat="server" DataSourceID="CategoriesDataSource" DataTextField="CategoryName" DataValueField="CategoryID">
+            <asp:ListItem>ddlCategories</asp:ListItem>
         </asp:DropDownList>
+    
+        <asp:AccessDataSource ID="CategoriesDataSource" runat="server" DataFile="~/App_Data/grocertogo.mdb" SelectCommand="SELECT * FROM [Categories]"></asp:AccessDataSource>
     
     </div>
     </form>
