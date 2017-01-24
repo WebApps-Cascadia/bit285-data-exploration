@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Categories</title>
+    <title>Data_Exploration</title>
     <script runat="server">
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,17 +16,28 @@
 
             ddlSections.DataSource = Sections;
             ddlSections.DataBind();
+
         }
-    </script>
+
+        protected void ddlSections_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-        <asp:DropDownList ID="ddlSections" runat="server">
+        <asp:DropDownList ID="ddlSections" runat="server" OnSelectedIndexChanged="ddlSections_SelectedIndexChanged" >
         </asp:DropDownList>
     
     </div>
-    </form>
-</body>
+    <p>
+        &nbsp;</p>
+        <asp:DropDownList ID="DDLCatagories" runat="server" DataSourceID="AccessDataSource1" DataTextField="CategoryName" DataValueField="CategoryID">
+        </asp:DropDownList>
+        <asp:AccessDataSource ID="AccessDataSource1" runat="server" DataFile="~/App_Data/grocertogo.mdb" SelectCommand="SELECT * FROM [Categories]"></asp:AccessDataSource>
+        </form>
+    </body>
 </html>
